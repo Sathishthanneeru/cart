@@ -328,9 +328,14 @@
         price.style.textAlign = "center";
         price.style.color = "red";
         price.innerHTML = data[i].price;
-        div1.append(title, desc, pic, category, price);
-        main_div.append(div1);
         let button=document.createElement("button")
+        button.innerHTML="removecart"
+        button.addEventListener("onclick",()=>{
+          div1.removechild(main_div)
+        })
+        div1.append(title, desc, pic, category, price,button);
+        main_div.append(div1);
+   
         
       }
     </script>
