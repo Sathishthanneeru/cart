@@ -305,16 +305,10 @@
         title.style.display = "flex";
         title.style.flexWrap = "wrap";
         title.style.justifyContent = "space-around";
-        // let title_container=document.createElement("div")
-        // title_container.style.backgroundColor="aqua"
-        // title_container.append(title)
+    
         let desc = document.createElement("p");
         desc.innerHTML = data[i].description;
-        // let container=document.createElement("div")
-        // container.style.height="25%"
-        // container.style.backgroundColor="lightgreen"
-        // container.style.overflow="scroll"
-        // container.append(desc)
+      
         let pic = document.createElement("img");
         pic.style.width = "100%";
         pic.style.height = "170px";
@@ -329,10 +323,12 @@
         price.style.color = "red";
         price.innerHTML = data[i].price;
         let button=document.createElement("button")
+        button.style.backgroundColor="orange"
+        button.style.borderRadius="20px"
         button.innerHTML="removecart"
-        button.addEventListener("onclick",()=>{
-          div1.removechild(main_div)
-        })
+        button.addEventListener("click",()=>{
+        div1.remove();
+        });
         div1.append(title, desc, pic, category, price,button);
         main_div.append(div1);
    
