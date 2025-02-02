@@ -8,6 +8,14 @@
       ::-webkit-scrollbar {
         display: none;
       }
+      button {
+        background-color: rgb(177, 53, 53);
+        border-radius: 20px;
+        padding: 5px;
+        bottom: center;
+        margin-left: 120px;
+        color: rgb(228, 193, 193);
+      }
     </style>
   </head>
   <body>
@@ -305,10 +313,10 @@
         title.style.display = "flex";
         title.style.flexWrap = "wrap";
         title.style.justifyContent = "space-around";
-    
+
         let desc = document.createElement("p");
         desc.innerHTML = data[i].description;
-      
+
         let pic = document.createElement("img");
         pic.style.width = "100%";
         pic.style.height = "170px";
@@ -322,17 +330,13 @@
         price.style.textAlign = "center";
         price.style.color = "red";
         price.innerHTML = data[i].price;
-        let button=document.createElement("button")
-        button.style.backgroundColor="orange"
-        button.style.borderRadius="20px"
-        button.innerHTML="removecart"
-        button.addEventListener("click",()=>{
-        div1.remove();
+        let button = document.createElement("button");
+        button.innerHTML = "removecart";
+        button.addEventListener("click", () => {
+          div1.remove();
         });
-        div1.append(title, desc, pic, category, price,button);
+        div1.append(title, desc, pic, category, price, button);
         main_div.append(div1);
-   
-        
       }
     </script>
   </body>
